@@ -1,0 +1,135 @@
+/************** Generalt ***************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  background-color: var(--Baggrundsfarve);
+}
+
+/************** Globale variabler ***************/
+:root {
+  --Baggrundsfarve: #fff5e9;
+  --tekst: #000000;
+  --lyserød1: #fff0e8;
+  --kontrastfarve: #f00010;
+  --lyserød2: #ffe1e6;
+  --grøn: #217941;
+}
+
+/************** Fonte ***************/
+
+/*Outfit*/
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/************** Navigationsbar ***************/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+.navbar a img {
+  height: 50px;
+}
+ul {
+  display: flex;
+  gap: 1.5rem;
+  font-family: "Outfit", sans-serif;
+  font-weight: 500;
+  list-style: none;
+  font-size: 14px;
+}
+ul li a {
+  text-decoration: none;
+  color: var(--tekst);
+  display: block;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+ul li a:hover {
+  color: var(--kontrastfarve);
+  border-radius: 5px;
+}
+
+/* Burger menu */
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.burger-menu .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--tekst);
+}
+
+/* Mobil menu*/
+@media (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+
+  .navbar > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--Baggrundsfarve);
+    position: fixed;
+    top: 11%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    padding-left: 5rem;
+    padding-bottom: 15rem;
+    row-gap: 3rem;
+    font-size: 20px;
+  }
+  .navbar > ul {
+    display: none;
+  }
+
+  .navbar > ul.active {
+    display: flex;
+  }
+}
+
+/* Dropdown menu (find din by)*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  background-color: var(--lyserød1);
+  color: black;
+  min-width: 150px;
+  list-style: none;
+}
+
+.dropdown-content li {
+  padding: 0.5rem 1rem;
+}
+
+.dropdown-content li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content li:hover {
+  background-color: var(--lyserød2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
