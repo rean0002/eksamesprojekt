@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <title>Produktside</title>
+
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+        .produkt-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            padding: 2rem;
+            gap: 2rem;
+            max-width: 1200px;
+            margin: auto;
+            flex-wrap: wrap;
+            background-color: #fef4e9;
+        }
+
+        .produkt-billede {
+            flex: 1;
+            min-width: 280px;
+            max-width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .produkt-billede img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 0.4rem;
+        }
+
+        .produkt-info {
+            flex: 1;
+            min-width: 280px;
+            max-width: 500px;
+            background-color: #fff4eb;
+            padding: 1rem;
+
+        }
+
+        .produkt-info2 {
+            margin-top: 4rem;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .produkt-info2-1 {
+            margin-top: 1rem;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .produkt-info2-2 {
+            margin-top: 1rem;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .produkt-info h1 {
+            font-size: 2rem;
+            margin-bottom: 0.2rem;
+            margin-top: 4rem;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .size {
+            font-family: "Outfit", sans-serif;
+            margin-bottom: 2.8rem;
+        }
+
+        .reserve-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.9rem 13.4rem;
+            border: 1.5px solid #f00010;
+            color: #f00010;
+            background: #ffe1e6;
+            font-weight: bold;
+            text-align: center;
+            cursor: pointer;
+            border-radius: 0.4rem;
+            font-size: 1rem;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .reserve-btn:hover {
+            background-color: #f00010;
+            color: #ffe1e6;
+        }
+
+        .ikon_p1 {
+            margin-top: 2.5rem;
+            font-family: "Outfit", sans-serif;
+        }
+
+        .ikon_p2 {
+            font-family: "Outfit", sans-serif;
+
+        }
+
+        .produkt-infop {
+            font-family: "Outfit", sans-serif;
+        }
+
+        .ikon-sektion {
+            display: flex;
+            gap: 2.4rem;
+            margin-top: 1.5rem;
+            align-items: flex-start;
+            margin-inline: 2.2rem 0rem;
+        }
+
+        .ikon {
+            flex: 1;
+            text-align: center;
+            font-size: 0.7rem;
+        }
+
+        .ikon1 {
+            margin-top: 1.4rem;
+        }
+
+        .ikon2 {
+            margin-top: 1rem;
+        }
+
+        .ikon3 {
+            margin-top: 0.8rem;
+        }
+
+        .ikon img {
+            width: 70px;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .produkt-container {
+                flex-direction: column;
+                align-items: center;
+                padding: 0rem;
+            }
+
+            .produkt-info h1 {
+                font-size: 1.5rem;
+                margin-bottom: 0.2rem;
+                margin-top: -1.5rem;
+                font-family: "Outfit", sans-serif;
+            }
+
+            .produkt-infop {
+                font-family: "Outfit", sans-serif;
+                font-size: 0.8rem;
+            }
+
+            .size {
+                font-family: "Outfit", sans-serif;
+                margin-bottom: 2.8rem;
+                font-size: 0.8rem;
+            }
+
+            .ikon-sektion {
+                display: flex;
+                gap: 2rem;
+                margin-top: 1.5rem;
+                align-items: flex-start;
+                margin-inline: 0rem 0rem;
+            }
+
+            .ikon_p1 {
+                margin-top: 2.5rem;
+                font-family: "Outfit", sans-serif;
+                font-size: 0.8rem;
+            }
+
+            .ikon_p2 {
+                font-family: "Outfit", sans-serif;
+                font-size: 0.6rem;
+
+            }
+
+            .produkt-info2 {
+                margin-top: 4rem;
+                font-family: "Outfit", sans-serif;
+                font-size: 0.8rem;
+            }
+
+            .produkt-info2-1 {
+                margin-top: 0.8rem;
+                font-family: "Outfit", sans-serif;
+                font-size: 0.8rem;
+            }
+
+            .produkt-info2-2 {
+                margin-top: 0.8rem;
+                font-family: "Outfit", sans-serif;
+                font-size: 0.8rem;
+                margin-bottom: 2rem;
+            }
+
+            .reserve-btn {
+                display: inline-block;
+                margin-top: 1rem;
+                padding: 0.5rem 9.4rem;
+                border: 1.5px solid #f00010;
+                color: #f00010;
+                background: #ffe1e6;
+                font-weight: bold;
+                text-align: center;
+                cursor: pointer;
+                border-radius: 0.4rem;
+                font-size: 0.8rem;
+                font-family: "Outfit", sans-serif;
+            }
+
+            .ikon img {
+                width: 55px;
+                height: auto;
+                margin-bottom: 0.5rem;
+            }
+
+            .produkt-info,
+            .produkt-billede {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="/index.html"><img src="/SVG/logo.svg" alt="logo"></a>
+            <div class="burger-menu">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+
+
+            <ul>
+                <li class="dropdown mobil-menu">
+                    <a href="/tojfaelleskab.html">FIND DIN BY</a>
+                    <ul class="dropdown-content">
+                        <li><a href="/tojfaelleskab.html">FREDERICIA</a></li>
+                        <li><a href="/tojfaelleskab.html">ROSKILDE</a></li>
+                        <li><a href="/tojfaelleskab.html">LYNGBY</a></li>
+                        <li><a href="/tojfaelleskab.html">AUU KØBENHAVN</a></li>
+                        <li><a href="/tojfaelleskab.html">KEA</a></li>
+                        <li><a href="/tojfaelleskab.html">NØRREBRO</a></li>
+                        <li><a href="/tojfaelleskab.html">RINGKØBING</a></li>
+                        <li><a href="/tojfaelleskab.html">RIBE</a></li>
+                    </ul>
+                </li>
+                <li><a href="/voresmission.html">VORES MISSION</a></li>
+                <li><a href="">BLIV MEDLEM</a></li>
+                <li> <a href="">LOG IND</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="produkt-container">
+            <div class="produkt-billede">
+                <img src="/img/produktimg.png" alt="Ganni Satin Kjole">
+            </div>
+            <div class="produkt-info">
+                <h1>GANNI SATIN KJOLE</h1>
+                <p class="size"><strong>Str. S</strong></p>
+                <p class="produkt-infop">Denne smukke figursyede kjole i satin fra Ganni, som fitter en
+                    størrelse small.</p>
+                <p class="produkt-infop">Perfekt til den næste festlige begivenhed!</p>
+
+                <button class="reserve-btn">RESERVER</button>
+
+                <p class="ikon_p1">Når du lejer dette stykke tøj...</p>
+                <div class="ikon-sektion">
+                    <div class="ikon">
+                        <img class="ikon1" src="/SVG/klode.svg" alt="Klode ikon">
+                        <p class="ikon_p2"><strong>Svarer det til…</strong><br>at springe 14 håndvaske over</p>
+                    </div>
+                    <div class="ikon">
+                        <img class="ikon2" src="SVG/pose.svg" alt="Stop taske ikon">
+                        <p class="ikon_p2"><strong>Svarer det til…</strong><br>30% mindre tøjforbrug</p>
+                    </div>
+                    <div class="ikon">
+                        <img class="ikon3" src="/SVG/pung.svg" alt="Penge ikon">
+                        <p class="ikon_p2"><strong>Svarer det til…</strong><br>at du sparer penge hver måned</p>
+                    </div>
+                </div>
+
+                <p class="produkt-info2"><strong>STAND:</strong><br>Helt ny – ingen tegn på slid</p>
+                <p class="produkt-info2-1"><strong>VASK:</strong><br>Håndvaskes</p>
+                <p class="produkt-info2-2"><strong>EJER:</strong><br>Anna &lt;3</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="/SVG/logo.svg" alt="logo"></a>
+        </div>
+        <div class="henvisninger">
+            <a href="voresmission.html">VORES MISSION</a>
+            <a href="#">LOG IND</a>
+            <a href="#">BLIV MEDLEM</a>
+            <a href="index.html">FIND DIN BY</a>
+        </div>
+        <div class="kontakt_sektion">
+            <p>Kontakt os:</p>
+            <a href="mailto:hej@anothercloset.dk">hej@anothercloset.dk</a>
+            <p>Adresse: Tønsbergvej 104 – 4000 Roskilde</p>
+            <p>CVR nr.: 44995875</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
