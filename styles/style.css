@@ -202,3 +202,39 @@ footer a:hover {
     row-gap: 5rem;
   }
 }
+/************** Banner ***************/
+.banner {
+  overflow: hidden;
+  background-color: var(--lyserød1);
+  border-top: 1px solid var(--grøn);
+  border-bottom: 1px solid var(--grøn);
+}
+
+.banner-track {
+  display: flex;
+  animation: scroll 20s linear infinite;
+}
+
+.banner-track span {
+  font-family: "Outfit", sans-serif;
+  white-space: nowrap;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: var(--grøn);
+  font-size: 1.2rem;
+  padding-right: 1rem;
+  word-spacing: 0.7rem;
+  padding-block: 0.5rem;
+  font-weight: bold;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
