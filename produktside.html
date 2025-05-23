@@ -276,6 +276,22 @@
             font-size: 0.81rem;
         }
 
+        .tilmelding-p2 {
+            font-family: "Outfit", sans-serif;
+            font-size: 0.9rem;
+            font-weight: bolder;
+            padding-top: 1rem;
+            padding-top: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tilmelding-p3 {
+            font-family: "Outfit", sans-serif;
+            margin-bottom: 1rem;
+            font-size: 0.7rem;
+            margin-top: -1rem;
+        }
+
 
         .submit-btn {
             background-color: var(--lyserød2);
@@ -290,6 +306,26 @@
             align-items: center;
             font-family: "Outfit", sans-serif;
             border: 1px solid var(--kontrastfarve);
+
+        }
+
+        .submit-btn2 {
+            background-color: var(--lyserød2);
+            color: var(--kontrastfarve);
+            border-radius: 0.4rem;
+            padding: 1rem;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Outfit", sans-serif;
+            border: 1px solid var(--kontrastfarve);
+            display: flex;
+            gap: 15rem;
+            margin-top: 1rem;
+
         }
 
         .submit-btn:hover {
@@ -297,8 +333,18 @@
             color: var(--lyserød2);
         }
 
+        .submit-btn2:hover {
+            background-color: var(--kontrastfarve);
+            color: var(--lyserød2);
+        }
+
 
         .submit-btn::after {
+            content: "→";
+            margin-left: 1rem;
+        }
+
+        .submit-btn2::after {
             content: "→";
             margin-left: 1rem;
         }
@@ -404,6 +450,26 @@
             .produkt-billede {
                 max-width: 100%;
             }
+
+            .submit-btn2 {
+                background-color: var(--lyserød2);
+                color: var(--kontrastfarve);
+                border-radius: 0.4rem;
+                padding: 1rem;
+                border: none;
+                font-weight: bold;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                font-family: "Outfit", sans-serif;
+                border: 1px solid var(--kontrastfarve);
+                display: flex;
+                gap: 6rem;
+                margin-top: 1rem;
+
+            }
+
         }
     </style>
 </head>
@@ -501,8 +567,8 @@
 
     <div id="modal" class="modal">
         <div class="modal-content">
-            <h2 class="tilmelding-h2">RESERVÉR DIT PRODUKT</h2>
-            <p class="tilmelding-p">Udfyld dine oplysninger, så reserverer vi produktet til dig i Nørrebro salonen. <br>
+            <h2 class="tilmelding-h2">RESERVÉR DETTE PRODUKT</h2>
+            <p class="tilmelding-p">Udfyld dine oplysninger, så reserverer vi produktet til dig i salonen. <br>
                 Du modtager en
                 e-mail med videre information.</p>
             <form class="modal-form">
@@ -510,8 +576,18 @@
                 <input type="email" placeholder="Din e-mail" required>
                 <button type="submit" class="submit-btn">BEKRÆFT RESERVATION</button>
             </form>
+            <p class="tilmelding-p2">Er du ikke medlem endnu?</p>
+            <br>
+            <p class="tilmelding-p3">Du skal tilmelde dig, før du kan reservere.</p>
+
+
+            <!-- Ny knap, som lukker popuppen som "LUK"-knappen -->
+            <button class="submit-btn2">TILMELD DIG FØRST</button>
+
             <button class="close-btn">LUK</button>
         </div>
+
+    </div>
     </div>
 
     <footer>
