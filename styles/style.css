@@ -110,6 +110,7 @@ ul li a:hover {
 /* Dropdown menu (find din by)*/
 .dropdown {
   position: relative;
+  z-index: 100;
 }
 
 .dropdown-content {
