@@ -3,7 +3,7 @@ function toggle(element) {
   answer.style.display = answer.style.display === "block" ? "none" : "block";
 }
 
-//ROTERENDE LOGO ( AI):
+//ROTERENDE LOGO :
 // Når man scroller på siden, skal logoet rotere:
 window.addEventListener("scroll", () => {
   // Find logoet med id "rundtLogo"
@@ -15,4 +15,3 @@ window.addEventListener("scroll", () => {
   // Jo mere man scroller, jo mere drejer det
   logo.style.transform = `rotate(${drej / 15}deg)`;
 });
-// Dette stykke kode er lavet med hjælp fra ChatGPT (OpenAI) via GPTOnline.ai
