@@ -36,79 +36,82 @@
 
                 <li><a href="">BLIV MEDLEM</a></li>
                 <li> <a href="">LOG IND</a></li>
-            </ul> 
+            </ul>
         </nav>
-<div class="banner">
-    <div class="banner-track">
-        <span>
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-        </span>
-        <span>
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-            RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
-        </span>
-    </div>
-</div>
- 
+        <div class="banner">
+            <div class="banner-track">
+                <span>
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <span>
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </div>
+        </div>
+
     </header>
 
     <main>
         <br>
+        <h1>KLÆDESKABET HOS NØRREBRO</h1>
+        <br>
 <div class="gallery">
+    <!-- Example item: Replace src and text with your images and product details -->
     <div class="item">
-        <img src="images/example1.jpg" alt="Product 1" />
+        <div class="image-container">
+            <img src="images/example1.jpg" alt="Product 1" />
+        </div>
         <div class="description">
             <div class="title">GRANN LONGSLEEVE BLOUSE</div>
             <div class="code">STYLE 1</div>
         </div>
     </div>
     <div class="item">
-        <img src="images/example2.jpg" alt="Product 2" />
+        <div class="image-container">
+            <img src="images/example2.jpg" alt="Product 2" />
+        </div>
         <div class="description">
             <div class="title">SECOND FEMALE LONGSLEEVE T-SHIRT</div>
             <div class="code">STYLE 2</div>
         </div>
     </div>
-        <div class="item">
-            <img src="images/example2.jpg" alt="Product 2" />
-            <div class="description">
-                <div class="title">SECOND FEMALE LONGSLEEVE T-SHIRT</div>
-                <div class="code">STYLE 2</div>
-            </div>
-        </div>
+    <!-- Copy and paste more .item blocks for each image/product -->
 </div>
+            <br>
+        </div>
 
     </main>
-        <footer>
-            <div class="footer_logo">
-                <a href="index.html"><img src="/SVG/logo.svg" alt="logo"></a>
-            </div>
-            <div class="henvisninger">
-                <a href="voresmission.html">VORES MISSION</a>
-                <a href="#">LOG IND</a>
-                <a href="#">BLIV MEDLEM</a>
-                <a href="index.html">FIND DIN BY</a>
-            </div>
-            <div class="kontakt_sektion">
-                <p>Kontakt os:</p>
-                <a href="mailto:hej@anothercloset.dk">hej@anothercloset.dk</a>
-                <p>Adresse: Tønsbergvej 104 – 4000 Roskilde</p>
-                <p>CVR nr.: 44995875</p>
-            </div>
-        
-        </footer>
-        <script src="script.js"></script>
-        <script src="voresmission.js"></script>
-        
-        </body>
+    <footer>
+        <div class="footer_logo">
+            <a href="index.html"><img src="/SVG/logo.svg" alt="logo"></a>
+        </div>
+        <div class="henvisninger">
+            <a href="voresmission.html">VORES MISSION</a>
+            <a href="#">LOG IND</a>
+            <a href="#">BLIV MEDLEM</a>
+            <a href="index.html">FIND DIN BY</a>
+        </div>
+        <div class="kontakt_sektion">
+            <p>Kontakt os:</p>
+            <a href="mailto:hej@anothercloset.dk">hej@anothercloset.dk</a>
+            <p>Adresse: Tønsbergvej 104 – 4000 Roskilde</p>
+            <p>CVR nr.: 44995875</p>
+        </div>
+
+    </footer>
+    <script src="script.js"></script>
+    <script src="voresmission.js"></script>
+
+</body>
 
 </html>
-  
+
 <style>
     * {
         box-sizing: border-box;
@@ -133,10 +136,14 @@
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
     }
 
-    .item img {
+    .image-container {
+        width: 100%;
+        overflow: hidden;
+    }
+
+    .image-container img {
         width: 100%;
         height: auto;
         display: block;
@@ -144,6 +151,7 @@
 
     .description {
         padding: 0.75rem 1rem;
+        text-align: center;
     }
 
     .title {
@@ -163,5 +171,3 @@
         }
     }
 </style>
-    
-
