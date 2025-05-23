@@ -141,6 +141,98 @@
             margin-bottom: 0.5rem;
         }
 
+        /* tilmeldings-popup */
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(4px);
+            /* sløret baggrund */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* mørk overlay */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tilmelding-h2 {
+            font-family: "Outfit", sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .modal-content {
+            background-color: #fff5e9;
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            font-family: "Outfit", sans-serif;
+            border-radius: 0.4rem;
+        }
+
+        .modal-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .modal-form input {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid #f00010;
+            border-radius: 0.4rem;
+            color: #f00010;
+        }
+
+        .tilmelding-p {
+            font-family: "Outfit", sans-serif;
+            margin-bottom: 1rem;
+            font-size: 0.81rem;
+        }
+
+
+        .submit-btn {
+            background-color: #ffe1e6;
+            color: #f00010;
+            border-radius: 0.4rem;
+            padding: 1rem;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Outfit", sans-serif;
+            border: 1px solid #f00010;
+        }
+
+        .submit-btn:hover {
+            background-color: #f00010;
+            color: #ffe1e6;
+        }
+
+
+        .submit-btn::after {
+            content: "→";
+            margin-left: 1rem;
+        }
+
+        .close-btn {
+            margin-top: 1rem;
+            background: none;
+            border: none;
+            color: black;
+            text-decoration: underline;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
         @media (max-width: 768px) {
             .produkt-container {
                 flex-direction: column;
@@ -237,7 +329,7 @@
 <body>
     <header>
         <nav class="navbar">
-            <a href="/index.html"><img src="/SVG/logo.svg" alt="logo"></a>
+            <a href="/index.html"><img src="SVG/logo.svg" alt="logo"></a>
             <div class="burger-menu">
                 <div class="bar"></div>
                 <div class="bar"></div>
@@ -303,6 +395,22 @@
         </section>
     </main>
 
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <h2 class="tilmelding-h2">RESERVÉR DIT PRODUKT</h2>
+            <p class="tilmelding-p">Udfyld dine oplysninger, så reserverer vi produktet til dig i Nørrebro salonen. <br>
+                Du modtager en
+                e-mail med videre information.</p>
+            <form class="modal-form">
+                <input type="text" placeholder="Dit navn" required>
+                <input type="email" placeholder="Din e-mail" required>
+                <button type="submit" class="submit-btn">BEKRÆFT RESERVATION</button>
+            </form>
+            <button id="closeModal" class="close-btn">LUK</button>
+        </div>
+    </div>
+
+
     <footer>
         <div class="footer_logo">
             <a href="index.html"><img src="/SVG/logo.svg" alt="logo"></a>
@@ -321,6 +429,27 @@
         </div>
 
     </footer>
+
+    <script>
+        const modal = document.getElementById("modal");
+        const reserveBtn = document.querySelector(".reserve-btn");
+        const closeBtn = document.getElementById("closeModal");
+
+        reserveBtn.addEventListener("click", function (e) {
+            e.preventDefault();
+            modal.style.display = "flex";
+        });
+
+        closeBtn.addEventListener("click", function () {
+            modal.style.display = "none";
+        });
+
+        window.addEventListener("click", function (e) {
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
     <script src="script.js"></script>
 </body>
 
