@@ -15,6 +15,17 @@
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
+        /************** Globale variabler ***************/
+        :root {
+            --Baggrundsfarve: #fff5e9;
+            --tekst: #000000;
+            --lyserød1: #fff0e8;
+            --kontrastfarve: #f00010;
+            --lyserød2: #ffe1e6;
+            --grøn: #217941;
+        }
+
+        /************** Produkt sektion ***************/
 
         .produkt-container {
             display: flex;
@@ -117,10 +128,10 @@
 
         .ikon-sektion {
             display: flex;
-            gap: 2.4rem;
+            gap: 3.2rem;
             margin-top: 1.5rem;
             align-items: flex-start;
-            margin-inline: 2.2rem 0rem;
+            margin-inline: -0.8rem -9rem;
         }
 
         .ikon {
@@ -147,7 +158,44 @@
             margin-bottom: 0.5rem;
         }
 
-        /* tilmeldings-popup */
+        /************** Cards sektion ***************/
+        .sektion2 {
+            font-family: "Outfit", sans-serif;
+            margin-block: 2rem;
+        }
+
+        .sektion2 h2 {
+            font-size: 16px;
+            padding-left: 2rem;
+            margin-top: -4rem;
+        }
+
+        .card_container img {
+            border-radius: 10px;
+        }
+
+        .card_sektion {
+            display: flex;
+            overflow-x: auto;
+            gap: 1rem;
+            padding: 1rem;
+            scroll-snap-type: x;
+            /* X betyder den scroller vandret*/
+        }
+
+
+        .card_container {
+            flex: 0 0 auto;
+            width: 200px;
+        }
+
+        .card_container p {
+            font-size: 13px;
+        }
+
+
+
+        /********** tilmeldings-popup **********/
 
         .modal {
             display: none;
@@ -238,6 +286,8 @@
             cursor: pointer;
             font-weight: bold;
         }
+
+        /************** Mobil ***************/
 
         @media (max-width: 768px) {
             .produkt-container {
@@ -365,16 +415,16 @@
         <div class="banner">
             <div class="banner-track">
                 <span>
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
                 <span>
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
             </div>
         </div>
@@ -382,7 +432,7 @@
 
     <main>
         <section class="produkt-container">
-            <div class="produkt-billede">
+            <!-- <div class="produkt-billede">
                 <img src="/img/produktimg.png" alt="Ganni Satin Kjole">
             </div>
             <div class="produkt-info">
@@ -390,10 +440,11 @@
                 <p class="size"><strong>Str. S</strong></p>
                 <p class="produkt-infop">Denne smukke figursyede kjole i satin fra Ganni, som fitter en
                     størrelse small.</p>
-                <p class="produkt-infop">Perfekt til den næste festlige begivenhed!</p>
+                <p class="produkt-infop">Perfekt til den næste festlige begivenhed!</p> 
 
-                <button class="reserve-btn">RESERVER</button>
-
+            <button class="reserve-btn">RESERVÉR</button>
+            -->
+            <!-- 
                 <p class="ikon_p1">Når du lejer dette stykke tøj...</p>
                 <div class="ikon-sektion">
                     <div class="ikon">
@@ -413,8 +464,79 @@
                 <p class="produkt-info2"><strong>STAND:</strong><br>Helt ny – ingen tegn på slid</p>
                 <p class="produkt-info2-1"><strong>VASK:</strong><br>Håndvaskes</p>
                 <p class="produkt-info2-2"><strong>EJER:</strong><br>Anna &lt;3</p>
-            </div>
+            </div>  -->
         </section>
+
+        <div class="sektion2">
+            <h2> ANBEFALET TIL DIG</h2>
+            <div class="card_sektion">
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+
+                <div class="card_container">
+                    <img src="/img/produktimg.png" alt="ganni kjole">
+                    <div class="produkt_info">
+                        <h4>GANNI SATIN KJOLE</h4>
+                        <p class="str">M</p>
+                        <p class="by">NØRREBRO</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
 
     <div id="modal" class="modal">
@@ -428,10 +550,9 @@
                 <input type="email" placeholder="Din e-mail" required>
                 <button type="submit" class="submit-btn">BEKRÆFT RESERVATION</button>
             </form>
-            <button id="closeModal" class="close-btn">LUK</button>
+            <button class="close-btn">LUK</button>
         </div>
     </div>
-
 
     <footer>
         <div class="footer_logo">
@@ -451,28 +572,11 @@
         </div>
 
     </footer>
-
-    <script>
-        const modal = document.getElementById("modal");
-        const reserveBtn = document.querySelector(".reserve-btn");
-        const closeBtn = document.getElementById("closeModal");
-
-        reserveBtn.addEventListener("click", function (e) {
-            e.preventDefault();
-            modal.style.display = "flex";
-        });
-
-        closeBtn.addEventListener("click", function () {
-            modal.style.display = "none";
-        });
-
-        window.addEventListener("click", function (e) {
-            if (e.target === modal) {
-                modal.style.display = "none";
-            }
-        });
-    </script>
+    <script src="tilmeldingsknap.js"></script>
     <script src="script.js"></script>
+    <script src="produktside.js"></script>
+
+
 </body>
 
 </html>
