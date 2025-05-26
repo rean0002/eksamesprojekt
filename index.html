@@ -4,6 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="/styles/style.css">
     <title>Forside</title>
 </head>
@@ -56,7 +61,7 @@
         </div>
 
         <div class="sektion2">
-            <h2> NYEST I SKABET</h2>
+            <h2 class="h2_nyesteiskabet"> NYESTE I SKABET</h2>
             <div class="card_sektion">
 
             </div>
@@ -82,7 +87,7 @@
             <h5>VIL DU VIDE MERE OM VORES KONCEPT?</h5>
             <div class="cta_knap"><a href="voresmission.html">LÆS MERE HER</a></div>
         </div>
-        <div class="sektion4">
+        <div class="sektion4" id="sektion4">
             <div class="by_tekst">
                 <h2>FIND DIT TØJFÆLLESSKAB</h2>
                 <p>Vælg den by der er tættest på dig, se deres udvalg, og bliv en del af deres fælleskab!</p>
@@ -182,12 +187,17 @@
         background-color: var(--lyserød1);
     }
 
+    @media (min-width: 768px) {
+        .cta_knap a {
+            padding-block: 0.9rem;
+            padding-inline: 2.2rem;
+        }
+    }
+
     .sektion1 {
         background-color: var(--lyserød1);
-        border: var(--kontrastfarve)solid 1px;
-        margin-top: 5rem;
-        margin-bottom: 5rem;
-        padding-block: 1.5rem;
+        padding-top: 4rem;
+        padding-bottom: 4rem;
     }
 
     @media (max-width: 768px) {
@@ -235,6 +245,10 @@
     .sektion2 {
         font-family: "Outfit", sans-serif;
         margin-block: 2rem;
+    }
+
+    .h2_nyesteiskabet {
+        padding-bottom: 1.1rem;
     }
 
     .sektion2 h2 {
