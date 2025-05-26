@@ -47,17 +47,18 @@
         <div class="banner">
             <div class="banner-track">
                 <span>
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
                 <span>
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
-                    RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;RECYKLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
+                    RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;RECYCLING&nbsp;&nbsp;&nbsp;&nbsp;
                 </span>
+
             </div>
         </div>
 
@@ -175,7 +176,7 @@
                     vores pengepung og
                     udnytter nogle af verdens mest udsatte mennesker.</p>
                 <p>Alligevel shopper vi som aldrig før. Vi køber tøj, vi ikke bruger og som ikke kan være i vores
-                    klædeskab.  Det kan vi
+                    klædeskab. Det kan vi
                     gøre bedre, og det skal vi gøre bedre!</p>
 
                 <a href="#" class="link">Bliv medlem</a>
@@ -184,19 +185,17 @@
         </div>
         <div class="info_boks2">
             <div class="info_tekst">
-                <h3>AKTIVIST OG FORFATTER</h3>
-                <p>Tina Werborg er forfatter, tøjaktivist og stifter af Another Closet. Hun elsker tøj – men ikke det
-                    overforbrug og den
-                    forurening, branchen står for i dag.</p>
-                <p>I næsten 10 år har hun arbejdet for at ændre måden, vi køber og bruger tøj på. Hun står bag
-                    eksperimenter som Et outfit,
-                    en uge og November uden nyt tøj.</p>
-                <p>I 2021 udgav hun Garderobemanifestet – en guide til at bryde med fast fashion.</p>
-                <p>Her deler hun konkrete råd til at rydde op, genbruge og elske det, du allerede har.</p>
+                <div class="video-container">
+                    <h3>MØD ET AF VORES MEDLEMMER</h3>
+                    <video class="responsive-video" controls>
+
+                    </video>
+                </div>
+
             </div>
-            <img src="/img/voresmission_img2.webp" alt="">
+
         </div>
-        <div class="info_boks3">
+        <div class="info_boks1">
             <div class="info_tekst">
                 <h3>ANOTHER CLOSET</h3>
                 <p>I 2020 sprang Tina Werborg ud som iværksætter og startede det cirkulære tøjkoncept Another Closet.
@@ -214,6 +213,25 @@
             </div>
             <img src="/img/voresmission_img3.webp" alt="">
         </div>
+
+
+        <div class="info_boks4">
+            <div class="info_tekst">
+                <h3>AKTIVIST OG FORFATTER</h3>
+                <p>Tina Werborg er forfatter, tøjaktivist og stifter af Another Closet.Hun elsker tøj – men ikke det
+                    overforbrug og den
+                    forurening, branchen står for i dag.</p>
+                <p>I næsten 10 år har hun arbejdet for at ændre måden, vi køber og bruger tøj på. Hun står bag
+                    eksperimenter som Et outfit,
+                    en uge og November uden nyt tøj.</p>
+                <p>I 2021 udgav hun Garderobemanifestet – en guide til at bryde med fast fashion.</p>
+                <p>Her deler hun konkrete råd til at rydde op, genbruge og elske det, du allerede har.</p>
+            </div>
+            <img src="/img/voresmission_img2.webp" alt="">
+
+        </div>
+
+
     </main>
     <footer>
         <div class="footer_logo">
@@ -367,7 +385,8 @@
 
     .info_boks1,
     .info_boks2,
-    .info_boks3 {
+    .info_boks3,
+    .info_boks4 {
         background-color: var(--lyserød1);
         margin-block: 4rem;
         border-top: var(--kontrastfarve) solid 1px;
@@ -378,13 +397,15 @@
 
     .info_boks1 p,
     .info_boks2 p,
-    .info_boks3 p {
+    .info_boks3 p,
+    .info_boks4 p {
         padding: 0.5rem;
     }
 
     .info_boks1 img,
     .info_boks2 img,
-    .info_boks3 img {
+    .info_boks3 img,
+    .info_boks4 img {
         padding-top: 2rem;
     }
 
@@ -404,17 +425,37 @@
         align-items: flex-start;
     }
 
+    .video-container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .responsive-video {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+    }
+
+    .info_boks h3 {
+        padding-bottom: 2rem;
+    }
 
 
     @media (min-width: 768px) {
+        .responsive-video {
+            width: 640px;
+            height: 360px;
+            padding-right: 8rem;
+        }
 
-        .info_boks1,
-        .info_boks3 {
+        .info_boks1 {
             display: grid;
             grid-template-columns: 1fr 2fr;
         }
 
-        .info_boks2 {
+        .info_boks4 {
             display: grid;
             grid-template-columns: 2fr 1fr;
         }
@@ -428,14 +469,13 @@
         }
 
         .info_boks1 img,
-        .info_boks2 img,
-        .info_boks3 img {
+        .info_boks3 img,
+        .info_boks4 img {
             max-width: 350px;
             height: auto;
         }
 
-        .info_boks1 img,
-        .info_boks3 img {
+        .info_boks1 img {
             order: -1;
         }
 
@@ -446,7 +486,8 @@
             border-radius: 0 10px 10px 0;
         }
 
-        .info_boks2 {
+        .info_boks2,
+        .info_boks4 {
             margin-left: 15vw;
             border-left: var(--kontrastfarve) solid 1px;
             border-radius: 10px 0 0 10px;
