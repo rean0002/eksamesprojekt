@@ -57,6 +57,7 @@ ul li a {
   color: var(--tekst);
   display: block;
   transition: background-color 0.2s, color 0.2s;
+  text-transform: uppercase;
 }
 
 ul li a:hover {
