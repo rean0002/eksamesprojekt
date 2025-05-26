@@ -170,22 +170,35 @@
                     udnytter nogle af verdens mest udsatte mennesker.</p>
                 <p>Alligevel shopper vi som aldrig før. Vi køber tøj, vi ikke bruger og som ikke kan være i vores
                     klædeskab. Det kan vi
-                    gøre bedre, og det skal vi gøre bedre!</p>
+                    gøre bedre, og det skal vi gøre bedre! <br></p>
 
+                <p> <br>Udforsk de mange saloner og kom igang med dit abonnement hos os allerede idag:</p>
                 <a href="#" class="link bliv-medlem-btn">Bliv medlem</a>
             </div>
             <img src="/img/voresmission_img1.webp" alt="">
         </div>
         <div class="info_boks2">
             <div class="info_tekst">
-                <div class="video-container">
-                    <h3>MØD ET AF VORES MEDLEMMER</h3>
-                    <video class="responsive-video" controls>
-
-                    </video>
-                </div>
-
+                <h3>MØD ET AF VORES MEDLEMMER</h3>
+                <p>Hvordan bruger man egentlig et tøjabonnement i hverdagen?  <br>I videoen fortæller Josephine, hvordan
+                    hun får det bedste ud af
+                    sit medlemskab – og hvorfor hun er fan af fællesskabet hos Another Closet.</p>
+                <p>Hun bruger abonnementet til at eksperimentere med stil, låne tøj til specielle begivenheder og slippe
+                    for tøjstress. 
+                    Det gør det både sjovere
+                    og nemmere at klæde sig på med god samvittighed.</p>
+                <p>Vi deler løbende medlemshistorier, inspiration og behind-the-scenes fra vores verden.  <br> <br>Hvis
+                    du vil være med og lære mere
+                    om, hvordan andre bruger Another Closet, så følg os her:</p>
+                <a class="link" href="#">Vores Sociale medier </a>
             </div>
+            <div class="video-container">
+                <video class="responsive-video" controls>
+
+                </video>
+            </div>
+
+
 
         </div>
         <div class="info_boks1">
@@ -200,7 +213,9 @@
                     i et trygt og inspirerende fællesskab. </p>
                 <p>Another Closet både fremmer tøjglæde og gør det nemt at tage et standpunkt mod overforbrug, spild og
                     en modebranche, der
-                    bevæger sig i en forkert retning.</p>
+                    bevæger sig i en forkert retning. <br></p>
+
+                <p> <br>Gå på opdagelse i klædeskabet og find din by her:</p>
                 <a class="link" href="index.html#sektion4">Find dit tøjfællesskab</a>
 
             </div>
@@ -406,8 +421,8 @@
 
     /*************** Info Sektion ****************/
 
+
     .info_boks1,
-    .info_boks2,
     .info_boks3,
     .info_boks4 {
         background-color: var(--lyserød1);
@@ -415,6 +430,15 @@
         border-top: var(--kontrastfarve) solid 1px;
         border-bottom: var(--kontrastfarve) solid 1px;
         padding-block: 3rem;
+        padding-inline: 2rem;
+    }
+
+    .info_boks2 {
+        background-color: var(--lyserød1);
+        margin-block: 4rem;
+        border-top: var(--kontrastfarve) solid 1px;
+        border-bottom: var(--kontrastfarve) solid 1px;
+        padding-block: 6rem;
         padding-inline: 2rem;
     }
 
@@ -433,10 +457,28 @@
     }
 
     .link {
+        position: relative;
         color: var(--kontrastfarve);
-        border-bottom: var(--kontrastfarve) solid 1px;
         margin-left: 0.5rem;
+        padding-top: 0rem;
         padding-bottom: 0.2rem;
+        font-style: italic;
+        font-size: 1rem;
+    }
+
+    .link::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 1px;
+        width: 0;
+        background-color: var(--kontrastfarve);
+        transition: width 0.3s ease;
+    }
+
+    .link:hover::after {
+        width: 100%;
     }
 
     .info_tekst {
@@ -476,6 +518,11 @@
         .info_boks1 {
             display: grid;
             grid-template-columns: 1fr 2fr;
+        }
+
+        .info_boks2 {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
         }
 
         .info_boks4 {
