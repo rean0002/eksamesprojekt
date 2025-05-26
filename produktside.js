@@ -21,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
           </div>
           <div class="produkt-info">
             <h1>${produkt.produktnavn}</h1>
-            <p class="size"><strong>Str.${produkt.str}</strong></p>
+            <p class="size"><strong>Str. ${produkt.str}</strong></p>
             <p class="produkt-infop">${produkt.produktinfo}</p>
             <button class="reserve-btn">RESERVÉR</button>
 
