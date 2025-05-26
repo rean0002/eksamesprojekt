@@ -28,20 +28,13 @@
                 <li class="dropdown mobil-menu">
                     <a href="/index.html">FIND DIN BY</a>
                     <ul class="dropdown-content">
-                        <li><a href="/tojfaelleskab.html">FREDERICIA</a></li>
-                        <li><a href="/tojfaelleskab.html">ROSKILDE</a></li>
-                        <li><a href="/tojfaelleskab.html">LYNGBY</a></li>
-                        <li><a href="/tojfaelleskab.html">AUU KØBENHAVN</a></li>
-                        <li><a href="/tojfaelleskab.html">KEA</a></li>
-                        <li><a href="/tojfaelleskab.html">NØRREBRO</a></li>
-                        <li><a href="/tojfaelleskab.html">RINGKØBING</a></li>
-                        <li><a href="/tojfaelleskab.html">RIBE</a></li>
+
                     </ul>
                 </li>
                 <li><a href="/voresmission.html" class="rod-tekst">VORES MISSION</a></li>
 
-                <li><a href="">BLIV MEDLEM</a></li>
-                <li> <a href="">LOG IND</a></li>
+                <li><a href="" class="bliv-medlem-btn">BLIV MEDLEM</a></li>
+                <li> <a href="" class="log-ind-btn">LOG IND</a></li>
             </ul>
         </nav>
         <div class="banner">
@@ -179,7 +172,7 @@
                     klædeskab. Det kan vi
                     gøre bedre, og det skal vi gøre bedre!</p>
 
-                <a href="#" class="link">Bliv medlem</a>
+                <a href="#" class="link bliv-medlem-btn">Bliv medlem</a>
             </div>
             <img src="/img/voresmission_img1.webp" alt="">
         </div>
@@ -208,8 +201,8 @@
                 <p>Another Closet både fremmer tøjglæde og gør det nemt at tage et standpunkt mod overforbrug, spild og
                     en modebranche, der
                     bevæger sig i en forkert retning.</p>
-                <a class="link" href="index.html">Find dit tøjfællesskab
-                </a>
+                <a class="link" href="index.html#sektion4">Find dit tøjfællesskab</a>
+
             </div>
             <img src="/img/voresmission_img3.webp" alt="">
         </div>
@@ -230,7 +223,34 @@
             <img src="/img/voresmission_img2.webp" alt="">
 
         </div>
+        <!-- BLIV MEDLEM POP-UP -->
+        <div id="medlems-modal" class="modal">
+            <div class="modal-content">
+                <h2 class="blivmedlem-h2">BLIV MEDLEM</h2>
+                <p>Tilmeld dig vores tøjfællesskab og få adgang til eksklusive fordele.</p>
+                <p> Udfyld dine oplysninger her, så sender vi dig en velkomstmail.</p>
+                <form class="modal-form">
+                    <input type="text" placeholder="Dit navn" required>
+                    <input type="email" placeholder="Din e-mail" required>
+                    <button type="submit" class="submit-btn3">TILMELD</button>
+                </form>
+                <button class="close-btn">LUK</button>
+            </div>
+        </div>
 
+        <!-- LOG IND POP-UP -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <h2>LOG IND</h2>
+                <p>Indtast dine oplysninger for at logge ind.</p>
+                <form class="modal-form">
+                    <input type="email" placeholder="Din e-mail" required>
+                    <input type="password" placeholder="Adgangskode" required>
+                    <button type="submit" class="submit-btn">LOG IND</button>
+                </form>
+                <button class="close-btn">LUK</button>
+            </div>
+        </div>
 
     </main>
     <footer>
@@ -253,6 +273,9 @@
     </footer>
     <script src="script.js"></script>
     <script src="voresmission.js"></script>
+    <script src="logind.js"></script>
+    <script src="blivmedlem.js"></script>
+    <script src="/header.js"></script>
 
 </body>
 
@@ -492,5 +515,220 @@
             border-left: var(--kontrastfarve) solid 1px;
             border-radius: 10px 0 0 10px;
         }
+    }
+
+    /********** Bliv medlem -popup **********/
+    /* Pop-up baggrund */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4px);
+        /* sløret baggrund */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* mørk overlay */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Selve boksen */
+    .modal-content {
+        background-color: var(--Baggrundsfarve);
+        padding: 2rem;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        font-family: "Outfit", sans-serif;
+        border-radius: 0.4rem;
+    }
+
+    .modal-content input {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid var(--kontrastfarve);
+        border-radius: 0.4rem;
+        color: var(--kontrastfarve);
+    }
+
+    .blivmedlem-h2 {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    .submit-btn3 {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
+    }
+
+    .submit-btn3:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+    .submit-btn3::after {
+        content: "→";
+        margin-left: 1rem;
+    }
+
+    .close-btn {
+        margin-top: 1rem;
+        padding-left: 0.2rem;
+        cursor: pointer;
+        border: none;
+        background-color: black;
+        color: white;
+    }
+
+    /********** tilmeldings-popup **********/
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4px);
+        /* sløret baggrund */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* mørk overlay */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tilmelding-h2 {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    .modal-content {
+        background-color: var(--Baggrundsfarve);
+        padding: 2rem;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        font-family: "Outfit", sans-serif;
+        border-radius: 0.4rem;
+    }
+
+    .modal-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .modal-form input {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid var(--kontrastfarve);
+        border-radius: 0.4rem;
+        color: var(--kontrastfarve);
+    }
+
+    .tilmelding-p {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+        font-size: 0.81rem;
+    }
+
+    .tilmelding-p2 {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.9rem;
+        font-weight: bolder;
+        padding-top: 1rem;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+
+    .tilmelding-p3 {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+        font-size: 0.7rem;
+        margin-top: -1rem;
+    }
+
+
+    .submit-btn {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
+
+    }
+
+    .submit-btn2 {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
+        display: flex;
+        gap: 15rem;
+        margin-top: 1rem;
+
+    }
+
+    .submit-btn:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+    .submit-btn2:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+
+    .submit-btn::after {
+        content: "→";
+        margin-left: 1rem;
+    }
+
+    .submit-btn2::after {
+        content: "→";
+        margin-left: 1rem;
+    }
+
+    .close-btn {
+        margin-top: 1rem;
+        background: none;
+        border: none;
+        color: black;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: bold;
     }
 </style>
