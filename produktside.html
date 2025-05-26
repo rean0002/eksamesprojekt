@@ -83,8 +83,9 @@
         .produkt-info h1 {
             font-size: 2rem;
             margin-bottom: 0.2rem;
-            margin-top: 4rem;
+            margin-top: 0rem;
             font-family: "Outfit", sans-serif;
+            text-transform: uppercase;
         }
 
         .size {
@@ -128,10 +129,10 @@
 
         .ikon-sektion {
             display: flex;
-            gap: 3.2rem;
+            gap: 0.2rem;
             margin-top: 1.5rem;
             align-items: flex-start;
-            margin-inline: -0.8rem -9rem;
+            margin-inline: 0.2rem -5rem;
         }
 
         .ikon {
@@ -219,7 +220,82 @@
             margin: 0;
         }
 
+        /********** Bliv medlem -popup **********/
+        /* Pop-up baggrund */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(4px);
+            /* sløret baggrund */
+            background-color: rgba(0, 0, 0, 0.5);
+            /* mørk overlay */
+            justify-content: center;
+            align-items: center;
+        }
 
+        /* Selve boksen */
+        .modal-content {
+            background-color: var(--Baggrundsfarve);
+            padding: 2rem;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+            text-align: left;
+            font-family: "Outfit", sans-serif;
+            border-radius: 0.4rem;
+        }
+
+        .modal-content input {
+            padding: 0.8rem;
+            font-size: 1rem;
+            border: 1px solid var(--kontrastfarve);
+            border-radius: 0.4rem;
+            color: var(--kontrastfarve);
+        }
+
+        .blivmedlem-h2 {
+            font-family: "Outfit", sans-serif;
+            margin-bottom: 1rem;
+        }
+
+        .submit-btn3 {
+            background-color: var(--lyserød2);
+            color: var(--kontrastfarve);
+            border-radius: 0.4rem;
+            padding: 1rem;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: "Outfit", sans-serif;
+            border: 1px solid var(--kontrastfarve);
+        }
+
+        .submit-btn3:hover {
+            background-color: var(--kontrastfarve);
+            color: var(--lyserød2);
+        }
+
+        .submit-btn3::after {
+            content: "→";
+            margin-left: 1rem;
+        }
+
+        .close-btn {
+            margin-top: 1rem;
+            padding: 0.7rem 1.2rem;
+            cursor: pointer;
+            border: none;
+            background-color: black;
+            color: white;
+        }
 
         /********** tilmeldings-popup **********/
 
@@ -500,8 +576,8 @@
                     </ul>
                 </li>
                 <li><a href="/voresmission.html">VORES MISSION</a></li>
-                <li><a href="">BLIV MEDLEM</a></li>
-                <li> <a href="">LOG IND</a></li>
+                <li><a href="" class="bliv-medlem-btn">BLIV MEDLEM</a></li>
+                <li> <a href="" class="log-ind-btn">LOG IND</a></li>
             </ul>
         </nav>
         <div class="banner">
@@ -563,32 +639,62 @@
             <h2> ANBEFALET TIL DIG</h2>
             <div class="card_sektion">
             </div>
-    </main>
-
-    <div id="modal" class="modal">
-        <div class="modal-content">
-            <h2 class="tilmelding-h2">RESERVÉR DETTE PRODUKT</h2>
-            <p class="tilmelding-p">Udfyld dine oplysninger, så reserverer vi produktet til dig i salonen. <br>
-                Du modtager en
-                e-mail med videre information.</p>
-            <form class="modal-form">
-                <input type="text" placeholder="Dit navn" required>
-                <input type="email" placeholder="Din e-mail" required>
-                <button type="submit" class="submit-btn">BEKRÆFT RESERVATION</button>
-            </form>
-            <p class="tilmelding-p2">Er du ikke medlem endnu?</p>
-            <br>
-            <p class="tilmelding-p3">Du skal tilmelde dig, før du kan reservere.</p>
-
-
-            <!-- Ny knap, som lukker popuppen som "LUK"-knappen -->
-            <button class="submit-btn2">TILMELD DIG FØRST</button>
-
-            <button class="close-btn">LUK</button>
         </div>
 
-    </div>
-    </div>
+        <!-- Reservér POP-UP -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <h2 class="tilmelding-h2">RESERVÉR DETTE PRODUKT</h2>
+                <p class="tilmelding-p">Udfyld dine oplysninger, så reserverer vi produktet til dig i salonen. <br>
+                    Du modtager en
+                    e-mail med videre information.</p>
+                <form class="modal-form">
+                    <input type="text" placeholder="Dit navn" required>
+                    <input type="email" placeholder="Din e-mail" required>
+                    <button type="submit" class="submit-btn">BEKRÆFT RESERVATION</button>
+                </form>
+                <p class="tilmelding-p2">Er du ikke medlem endnu?</p>
+                <br>
+                <p class="tilmelding-p3">Du skal tilmelde dig, før du kan reservere.</p>
+
+
+                <!-- Ny knap, som lukker popuppen som "LUK"-knappen -->
+                <button class="submit-btn2">TILMELD DIG FØRST</button>
+
+                <button class="close-btn">LUK</button>
+            </div>
+
+        </div>
+
+        <!-- BLIV MEDLEM POP-UP -->
+        <div id="medlems-modal" class="modal">
+            <div class="modal-content">
+                <h2 class="blivmedlem-h2">BLIV MEDLEM</h2>
+                <p>Tilmeld dig vores tøjfællesskab og få adgang til eksklusive fordele.</p>
+                <p> Udfyld dine oplysninger her, så sender vi dig en velkomstmail.</p>
+                <form class="modal-form">
+                    <input type="text" placeholder="Dit navn" required>
+                    <input type="email" placeholder="Din e-mail" required>
+                    <button type="submit" class="submit-btn3">TILMELD</button>
+                </form>
+                <button class="close-btn">LUK</button>
+            </div>
+        </div>
+
+        <!-- LOG IND POP-UP -->
+        <div id="login-modal" class="modal">
+            <div class="modal-content">
+                <h2>LOG IND</h2>
+                <p>Indtast dine oplysninger for at logge ind.</p>
+                <form class="modal-form">
+                    <input type="email" placeholder="Din e-mail" required>
+                    <input type="password" placeholder="Adgangskode" required>
+                    <button type="submit" class="submit-btn">LOG IND</button>
+                </form>
+                <button class="close-btn">LUK</button>
+            </div>
+        </div>
+    </main>
 
     <footer>
         <div class="footer_logo">
@@ -611,6 +717,8 @@
     <script src="tilmeldingsknap.js"></script>
     <script src="script.js"></script>
     <script src="produktside.js"></script>
+    <script src="blivmedlem.js"></script>
+    <script src="logind.js"></script>
 
 
 </body>
