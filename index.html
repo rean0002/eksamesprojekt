@@ -139,6 +139,18 @@
         padding-block: 0.5rem;
     }
 
+    @media (min-width: 768px) {
+        .intro h1 {
+            font-size: 27px;
+            padding-bottom: 2rem;
+        }
+
+        .intro p {
+            padding-block: 0.5rem;
+            font-size: 20px;
+        }
+    }
+
     /************** intro sketion ***************/
     .intro {
         display: flex;
@@ -156,8 +168,8 @@
         font-family: "Outfit", sans-serif;
         text-decoration: none;
         font-weight: 700;
-        color: var(--kontrastfarve);
-        background-color: var(--lyserød1);
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød1);
         border: var(--kontrastfarve) solid 1px;
         border-radius: 10px;
         padding-block: 0.7rem;
@@ -166,8 +178,16 @@
     }
 
     .cta_knap a:hover {
-        background-color: var(--kontrastfarve);
-        color: var(--lyserød1);
+        color: var(--kontrastfarve);
+        background-color: var(--lyserød1);
+    }
+
+    .sektion1 {
+        background-color: var(--lyserød1);
+        border: var(--kontrastfarve)solid 1px;
+        margin-top: 5rem;
+        margin-bottom: 5rem;
+        padding-block: 1.5rem;
     }
 
     @media (max-width: 768px) {
@@ -255,7 +275,11 @@
         flex-direction: column;
         height: 370px;
         gap: 0.5rem;
-        /* lille mellemrum mellem billede og tekst */
+        transition: transform 0.5s ease;
+    }
+
+    .card_container:hover {
+        transform: scale(1.1);
     }
 
 
@@ -269,6 +293,10 @@
 
     .card_container p {
         font-size: 13px;
+    }
+
+    .card_container:hover h4 {
+        text-decoration: underline;
     }
 
     /************** Guide sektion ***************/
@@ -288,9 +316,9 @@
 
     .sektion3 h5 {
         text-align: center;
-        margin: 2rem;
         font-size: 16px;
         font-weight: 500;
+        padding-top: 3rem;
     }
 
     .guide {
@@ -366,6 +394,7 @@
         font-weight: bold;
         white-space: nowrap;
         transition: background-color 0.2s, color 0.2s;
+        text-transform: uppercase;
     }
 
     .by_container a:hover {
