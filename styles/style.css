@@ -17,6 +17,17 @@ body {
   flex-direction: column;
 }
 
+.wrapper {
+  max-width: 1600px; /* Sæt en max-bredde for at undgå, at indholdet bliver for bredt */
+  margin: 0 auto; /* Centrerer wrapperen */
+  padding: 0 10px; /* Lidt luft på siderne, som følger med op i større skærme */
+}
+@media (min-width: 1600px) {
+  .wrapper {
+    padding: 0 80px; /* Mere luft på meget store skærme */
+  }
+}
+
 /************** Globale variabler ***************/
 :root {
   --Baggrundsfarve: #fff5e9;
