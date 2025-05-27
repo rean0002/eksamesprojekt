@@ -51,131 +51,135 @@
     </header>
 
     <main>
-        <br>
-        <div class="header-row">
-            <h1>KLÆDESKABET HOS NØRREBRO</h1>
-            <button class="filter-btn" onclick="openFilter()">FILTRER OG SORTER</button>
-        </div>
-        <!-- Popup-filtreringsboks -->
-        <div class="filter-popup" id="filterPopup">
-            <div class="filter-overlay" onclick="closeFilter()"></div>
+        <div class="wrapper">
+            <br>
+            <div class="header-row">
+                <h1>KLÆDESKABET HOS NØRREBRO</h1>
+                <button class="filter-btn" onclick="openFilter()">FILTRER OG SORTER</button>
+            </div>
+            <!-- Popup-filtreringsboks -->
+            <div class="filter-popup" id="filterPopup">
+                <div class="filter-overlay" onclick="closeFilter()"></div>
 
-            <div class="filter-box">
-                <div class="filter-header">
-                    <h2>FILTRER OG SORTER</h2>
-                    <button class="close-btn" onclick="closeFilter()">×</button>
-                </div>
+                <div class="filter-box">
+                    <div class="filter-header">
+                        <h2>FILTRER OG SORTER</h2>
+                        <button class="close-btn" onclick="closeFilter()">×</button>
+                    </div>
 
-                <div class="filter-group">
-                    <label for="size">Størrelse</label>
-                    <select id="size">
-                        <option>Vælg størrelse</option>
-                        <option>XS</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                    </select>
-                </div>
+                    <div class="filter-group">
+                        <label for="size">Størrelse</label>
+                        <select id="size">
+                            <option>Vælg størrelse</option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                    </div>
 
-                <div class="filter-group">
-                    <label for="color">Farve</label>
-                    <select id="color">
-                        <option>Vælg farve</option>
-                        <option>Sort</option>
-                        <option>Hvid</option>
-                        <option>Beige</option>
-                        <option>Grå</option>
-                        <option>Blå</option>
-                        <option>Grøn</option>
-                        <option>Lyserød</option>
-                        <option>Rød</option>
-                    </select>
-                </div>
+                    <div class="filter-group">
+                        <label for="color">Farve</label>
+                        <select id="color">
+                            <option>Vælg farve</option>
+                            <option>Sort</option>
+                            <option>Hvid</option>
+                            <option>Beige</option>
+                            <option>Grå</option>
+                            <option>Blå</option>
+                            <option>Grøn</option>
+                            <option>Lyserød</option>
+                            <option>Rød</option>
+                            <option>Gul</option>
+                        </select>
+                    </div>
 
-                <div class="filter-group">
-                    <label for="brand">Mærke</label>
-                    <select id="brand">
-                        <option>Vælg mærke</option>
-                        <option>Ganni</option>
-                        <option>Envii</option>
-                        <option>Prada</option>
-                        <option>Bershka</option>
-                        <option>Vintage</option>
-                        <option>Mochi</option>
-                    </select>
-                </div>
+                    <div class="filter-group">
+                        <label for="brand">Mærke</label>
+                        <select id="brand">
+                            <option>Vælg mærke</option>
+                            <option>Ganni</option>
+                            <option>Envii</option>
+                            <option>Second Female</option>
+                            <option>Bershka</option>
+                            <option>Vintage</option>
+                            <option>Mochi</option>
+                            <option>Oval Square</option>
+                            <option>Pieces</option>
+                            <option>Roberto</option>
+                        </select>
+                    </div>
 
-                <div class="filter-group">
-                    <label for="style">Style</label>
-                    <select id="style">
-                        <option>Vælg style</option>
-                        <option>Casual</option>
-                        <option>Sporty</option>
-                        <option>Vintage</option>
-                        <option>Festligt</option>
-                    </select>
-                </div>
+                    <div class="filter-group">
+                        <label for="style">Style</label>
+                        <select id="style">
+                            <option>Vælg style</option>
+                            <option>Casual</option>
+                            <option>Sporty</option>
+                            <option>Vintage</option>
+                            <option>Festligt</option>
+                        </select>
+                    </div>
 
-                <div class="filter-actions">
-                    <button onclick="resetFilter()">Ryd filtre</button>
-                    <button onclick="closeFilter()">Færdig</button>
+                    <div class="filter-actions">
+                        <button onclick="resetFilter()">Ryd filtre</button>
+                        <button onclick="applyFilter()">Færdig</button>
+
+                    </div>
                 </div>
             </div>
-        </div>
 
+            <div class="sektion2">
 
+                <div class="gallery">
 
-
-
-        <div class="sektion2">
-
-            <div class="gallery">
-
-            </div>
-        </div>
-
-        <div class="tilmeld_sektion">
-            <div class="tilmeld_tekst">
-                <h2>Tilmed dig vores nyhedsbrev!</h2>
-                <p>Få bæredygtig stil direkte i din indbakke.
-                    Vær blandt de første til at få nye looks,
-                    bæredygtige stylingtips, events og eksklusive medlemstilbud.</p>
-                <form class="nyhedsbrev-form">
-                    <input type="email" placeholder="Indtast din e-mail" required>
-                    <button type="submit">TILMELD</button>
-                </form>
+                </div>
             </div>
 
-            <div class="rundtlogo_container">
-                <img id="rundtLogo" class="rundt_logo" src="/SVG/logo_illustration.svg" alt="rundt logo">
-            </div>
-        </div>
-        <!-- BLIV MEDLEM POP-UP -->
-        <div id="medlems-modal" class="modal">
-            <div class="modal-content">
-                <h2 class="blivmedlem-h2">BLIV MEDLEM</h2>
-                <p>Tilmeld dig vores tøjfællesskab og få adgang til eksklusive fordele.</p>
-                <p> Udfyld dine oplysninger her, så sender vi dig en velkomstmail.</p>
-                <form class="modal-form">
-                    <input type="text" placeholder="Dit navn" required>
-                    <input type="email" placeholder="Din e-mail" required>
-                    <button type="submit" class="submit-btn3">TILMELD</button>
-                </form>
-                <button class="close-btn">LUK</button>
-            </div>
-        </div>
+            <div class="tilmeld_sektion">
+                <div class="tilmeld_tekst">
+                    <h2>Tilmed dig vores nyhedsbrev!</h2>
+                    <p>Få bæredygtig stil direkte i din indbakke.
+                        Vær blandt de første til at få nye looks,
+                        bæredygtige stylingtips, events og eksklusive medlemstilbud.</p>
+                    <form class="nyhedsbrev-form">
+                        <input type="email" placeholder="Indtast din e-mail" required>
+                        <button type="submit">TILMELD</button>
+                    </form>
+                </div>
 
-        <!-- LOG IND POP-UP -->
-        <div id="login-modal" class="modal">
-            <div class="modal-content">
-                <h2>LOG IND</h2>
-                <p>Indtast dine oplysninger for at logge ind.</p>
-                <form class="modal-form">
-                    <input type="email" placeholder="Din e-mail" required>
-                    <input type="password" placeholder="Adgangskode" required>
-                    <button type="submit" class="submit-btn">LOG IND</button>
-                </form>
-                <button class="close-btn">LUK</button>
+                <div class="rundtlogo_container">
+                    <img id="rundtLogo" class="rundt_logo" src="/SVG/logo_illustration.svg" alt="rundt logo">
+                </div>
+            </div>
+            <!-- BLIV MEDLEM POP-UP -->
+            <div id="medlems-modal" class="modal">
+                <div class="modal-content">
+                    <h2 class="blivmedlem-h2">BLIV MEDLEM</h2>
+                    <p>Tilmeld dig vores tøjfællesskab og få adgang til eksklusive fordele.</p>
+                    <p> Udfyld dine oplysninger her, så sender vi dig en velkomstmail.</p>
+                    <form class="modal-form">
+                        <input type="text" placeholder="Dit navn" required>
+                        <input type="email" placeholder="Din e-mail" required>
+                        <button type="submit" class="submit-btn3">TILMELD</button>
+                    </form>
+                    <button class="close-btn">LUK</button>
+                </div>
+            </div>
+
+            <!-- LOG IND POP-UP -->
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <h2>LOG IND</h2>
+                    <p>Indtast dine oplysninger for at logge ind.</p>
+                    <form class="modal-form">
+                        <input type="email" placeholder="Din e-mail" required>
+                        <input type="password" placeholder="Adgangskode" required>
+                        <button type="submit" class="submit-btn">LOG IND</button>
+                    </form>
+                    <button class="close-btn">LUK</button>
+                </div>
             </div>
         </div>
     </main>

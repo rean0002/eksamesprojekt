@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
+
   const by = params.get("by"); // f.eks. "Nørrebro"
 
   const header = document.querySelector(".header-row h1");
