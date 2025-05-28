@@ -55,7 +55,10 @@
             <br>
             <div class="header-row">
                 <h1>KLÆDESKABET HOS NØRREBRO</h1>
-                <button class="filter-btn" onclick="openFilter()">FILTRER OG SORTER</button>
+                <button class="filter-btn" onclick="openFilter()">
+                    FILTRER OG SORTER
+                    <img src="SVG/filter.svg" alt="Filter ikon" class="filter-icon">
+                </button>
             </div>
             <!-- Popup-filtreringsboks -->
             <div class="filter-popup" id="filterPopup">
@@ -336,6 +339,14 @@
     .filter-btn:hover {
         background-color: var(--kontrastfarve);
         color: var(--lyserød1);
+    }
+
+    .filter-icon {
+        height: 1rem;
+        width: auto;
+        margin-left: 0.5rem;
+        /* lille mellemrum mellem tekst og ikon */
+        vertical-align: middle;
     }
 
     @media (min-width: 900px) {
