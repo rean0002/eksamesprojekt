@@ -23,20 +23,12 @@
                 <li class="dropdown mobil-menu">
                     <a href="/index.html">FIND DIN BY</a>
                     <ul class="dropdown-content">
-                        <li><a href="/tojfaelleskab.html">FREDERICIA</a></li>
-                        <li><a href="/tojfaelleskab.html">ROSKILDE</a></li>
-                        <li><a href="/tojfaelleskab.html">LYNGBY</a></li>
-                        <li><a href="/tojfaelleskab.html">AUU KØBENHAVN</a></li>
-                        <li><a href="/tojfaelleskab.html">KEA</a></li>
-                        <li><a href="/tojfaelleskab.html">NØRREBRO</a></li>
-                        <li><a href="/tojfaelleskab.html">RINGKØBING</a></li>
-                        <li><a href="/tojfaelleskab.html">RIBE</a></li>
                     </ul>
                 </li>
-                <li><a href="/voresmission.html" class="rod-tekst">VORES MISSION</a></li>
 
-                <li><a href="">BLIV MEDLEM</a></li>
-                <li> <a href="">LOG IND</a></li>
+                <li><a href="/voresmission.html" class="rod-tekst">VORES MISSION</a></li>
+                <li><a href="" class="bliv-medlem-btn">BLIV MEDLEM</a></li>
+                <li> <a href="" class="log-ind-btn">LOG IND</a></li>
             </ul>
         </nav>
         <div class="banner">
@@ -59,33 +51,136 @@
     </header>
 
     <main>
-        <br>
-        <div class="header-row">
-            <h1>KLÆDESKABET HOS NØRREBRO</h1>
-            <button class="filter-btn">FILTRE OG SORTER</button>
-        </div>
+        <div class="wrapper">
+            <br>
+            <div class="header-row">
+                <h1>KLÆDESKABET HOS NØRREBRO</h1>
+                <button class="filter-btn" onclick="openFilter()">FILTRER OG SORTER</button>
+            </div>
+            <!-- Popup-filtreringsboks -->
+            <div class="filter-popup" id="filterPopup">
+                <div class="filter-overlay" onclick="closeFilter()"></div>
 
-        <BR></BR>
+                <div class="filter-box">
+                    <div class="filter-header">
+                        <h2>FILTRER OG SORTER</h2>
+                        <button class="close-btn" onclick="closeFilter()">×</button>
+                    </div>
 
+                    <div class="filter-group">
+                        <label for="size">Størrelse</label>
+                        <select id="size">
+                            <option>Vælg størrelse</option>
+                            <option>XS</option>
+                            <option>S</option>
+                            <option>M</option>
+                            <option>L</option>
+                            <option>XL</option>
+                        </select>
+                    </div>
 
-        <div class="sektion2">
+                    <div class="filter-group">
+                        <label for="color">Farve</label>
+                        <select id="color">
+                            <option>Vælg farve</option>
+                            <option>Sort</option>
+                            <option>Hvid</option>
+                            <option>Beige</option>
+                            <option>Grå</option>
+                            <option>Blå</option>
+                            <option>Grøn</option>
+                            <option>Lyserød</option>
+                            <option>Rød</option>
+                            <option>Gul</option>
+                        </select>
+                    </div>
 
-            <div class="gallery">
-                <div class="card">
-                    <img src="/img/produktimg.png" alt="ganni kjole">
-                    <div class="produkt_info">
-                        <h4>GANNI SATIN KJOLE</h4>
-                        <p class="str">M</p>
+                    <div class="filter-group">
+                        <label for="brand">Mærke</label>
+                        <select id="brand">
+                            <option>Vælg mærke</option>
+                            <option>Ganni</option>
+                            <option>Envii</option>
+                            <option>Second Female</option>
+                            <option>Bershka</option>
+                            <option>Vintage</option>
+                            <option>Mochi</option>
+                            <option>Oval Square</option>
+                            <option>Pieces</option>
+                            <option>Roberto</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-group">
+                        <label for="style">Style</label>
+                        <select id="style">
+                            <option>Vælg style</option>
+                            <option>Casual</option>
+                            <option>Sporty</option>
+                            <option>Vintage</option>
+                            <option>Festligt</option>
+                        </select>
+                    </div>
+
+                    <div class="filter-actions">
+                        <button onclick="resetFilter()">Ryd filtre</button>
+                        <button onclick="applyFilter()">Filtrer</button>
+
                     </div>
                 </div>
             </div>
-        </div>
 
-        <div class="sektion3">
-            <h2>Tilmed dig vores nyhedsbrev!</h2>
-            <p>Få bæredygtig stil direkte i din indbakke
-                Vær blandt de første til at få nye looks,
-                bæredygtige stylingtips, events og eksklusive medlemstilbud.</p>
+            <div class="sektion2">
+
+                <div class="gallery">
+
+                </div>
+            </div>
+
+            <div class="tilmeld_sektion">
+                <div class="tilmeld_tekst">
+                    <h2>Tilmed dig vores nyhedsbrev!</h2>
+                    <p>Få bæredygtig stil direkte i din indbakke.
+                        Vær blandt de første til at få nye looks,
+                        bæredygtige stylingtips, events og eksklusive medlemstilbud.</p>
+                    <form class="nyhedsbrev-form">
+                        <input type="email" placeholder="Indtast din e-mail" required>
+                        <button type="submit">TILMELD</button>
+                    </form>
+                </div>
+
+                <div class="rundtlogo_container">
+                    <img id="rundtLogo" class="rundt_logo" src="/SVG/logo_illustration.svg" alt="rundt logo">
+                </div>
+            </div>
+            <!-- BLIV MEDLEM POP-UP -->
+            <div id="medlems-modal" class="modal">
+                <div class="modal-content">
+                    <h2 class="blivmedlem-h2">BLIV MEDLEM</h2>
+                    <p>Tilmeld dig vores tøjfællesskab og få adgang til eksklusive fordele.</p>
+                    <p> Udfyld dine oplysninger her, så sender vi dig en velkomstmail.</p>
+                    <form class="modal-form">
+                        <input type="text" placeholder="Dit navn" required>
+                        <input type="email" placeholder="Din e-mail" required>
+                        <button type="submit" class="submit-btn3">TILMELD</button>
+                    </form>
+                    <button class="close-btn">LUK</button>
+                </div>
+            </div>
+
+            <!-- LOG IND POP-UP -->
+            <div id="login-modal" class="modal">
+                <div class="modal-content">
+                    <h2>LOG IND</h2>
+                    <p>Indtast dine oplysninger for at logge ind.</p>
+                    <form class="modal-form">
+                        <input type="email" placeholder="Din e-mail" required>
+                        <input type="password" placeholder="Adgangskode" required>
+                        <button type="submit" class="submit-btn">LOG IND</button>
+                    </form>
+                    <button class="close-btn">LUK</button>
+                </div>
+            </div>
         </div>
     </main>
     <footer>
@@ -109,12 +204,28 @@
     <script src="script.js"></script>
     <script src="voresmission.js"></script>
     <script src="tojfaelleskab.js"></script>
+    <script src="/header.js"></script>
+    <script src="logind.js"></script>
+    <script src="blivmedlem.js"></script>
+    <script src="voresmission.js"></script>
+    <script src="filterknap.js"></script>
 
 </body>
 
 </html>
 
 <style>
+    /************** Globale variabler ***************/
+    :root {
+        --Baggrundsfarve: #fff5e9;
+        --tekst: #000000;
+        --lyserød1: #fff0e8;
+        --kontrastfarve: #f00010;
+        --lyserød2: #ffe1e6;
+        --grøn: #217941;
+    }
+
+    /*********** Generalt ***********/
     * {
         box-sizing: border-box;
         margin: 0;
@@ -126,30 +237,84 @@
         background-color: #FFF5E9;
     }
 
-    main {
-        padding: 1rem;
+    .sektion2 {
+        padding-inline: 1rem;
     }
 
-    .sektion3 {
+
+    .tilmeld_sektion {
         font-family: "Outfit", sans-serif;
         background-color: var(--lyserød1);
-        border: var(--kontrastfarve)solid 1px;
-        padding: 1rem;
+        border-top: var(--kontrastfarve)solid 1px;
+        border-bottom: var(--kontrastfarve)solid 1px;
         margin-block: 6rem;
     }
 
+    /************ Galleri**************/
+
     .gallery {
         display: grid;
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+        grid-template-columns: 1fr 1fr;
+        padding-block: 2rem;
+        gap: 10px;
+        padding-top: 4rem;
     }
 
-    .item {
-        background: #fff;
-        border-radius: 8px;
+    .card {
         overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
+        border-radius: 10px;
+        text-decoration: none;
+        color: var(--tekst);
+        transition: transform 0.5s ease;
+    }
+
+    .card:hover {
+        transform: scale(1.1);
+    }
+
+    .card img {
+        width: 92%;
+        aspect-ratio: 3 / 4;
+        /* Holder form på både mobil og desktop */
+        object-fit: cover;
+        /* Beskær billedet pænt */
+        border-radius: 10px;
+        transition: transform 0.4s ease;
+        display: block;
+    }
+
+    h4 {
+        padding-block: 0.5rem;
+    }
+
+
+    /********* Desktop ***********/
+
+    @media (min-width: 900px) {
+        .gallery {
+            grid-template-columns: repeat(3, 1fr);
+            padding-inline: 6rem;
+            gap: 30px;
+        }
+
+
+        .header-row {
+            padding-inline: 6.8rem !important;
+            padding-top: 3rem;
+        }
+    }
+
+    /******* Filter knap*********/
+    .header-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        padding-inline: 1rem;
+    }
+
+    .header-row h1 {
+        margin: 0;
     }
 
     .filter-btn {
@@ -165,53 +330,425 @@
         justify-content: right;
         font-size: 0.8rem;
         font-family: "Outfit", sans-serif;
+        transition: background-color 0.2s, color 0.2s;
     }
 
-    .card {
-        overflow: hidden;
-        text-align: left;
+    .filter-btn:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød1);
     }
 
-    .card img {
-        border-radius: 10px;
+    @media (min-width: 900px) {
+        .filter-btn {
+            margin-right: 2rem;
+        }
     }
 
-    .item img {
+    /* Baggrund og popup-container */
+    .filter-popup {
+        position: fixed;
+        top: 0;
+        left: 0;
         width: 100%;
-        height: auto;
-        display: block;
-
+        height: 100%;
+        display: none;
+        z-index: 999;
     }
 
-    .description {
-        padding: 0.75rem 1rem;
+    /* Mørk overlay bag boksen */
+    .filter-overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
     }
 
-    .title {
-        font-weight: bold;
-        font-size: 0.95rem;
-        margin-bottom: 0.25rem;
+    /* Selve filterboksen */
+    .filter-box {
+        position: relative;
+        z-index: 1000;
+        background: var(--Baggrundsfarve);
+        max-width: 500px;
+        margin: 5% auto;
+        padding: 2rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        font-family: "Outfit", sans-serif;
     }
 
-    .code {
-        color: #888;
-        font-size: 0.85rem;
-    }
-
-    .header-row {
+    /* Toplinje med luk */
+    .filter-header {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    .close-btn {
+        background: none;
+        border: none;
+        font-size: 1.8rem;
+        cursor: pointer;
+        font-family: "Outfit", sans-serif;
+
+    }
+
+    /* Hver filtergruppe */
+    .filter-group {
+        margin-top: 1.5rem;
+        background: var(--Baggrundsfarve);
+    }
+
+
+
+    .filter-group label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+        font-family: "Outfit", sans-serif;
+    }
+
+
+    .filter-group select {
+        width: 100%;
+        padding: 0.5rem;
+        border-radius: 0.3rem;
+        border: 1px solid var(--kontrastfarve);
+        background-color: #ffff;
+        color: var(--kontrastfarve);
+    }
+
+    /* Ryd / færdig knapper */
+    .filter-actions {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+
+    .filter-actions button {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
+    }
+
+    .filter-actions button:first-child {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+    }
+
+    .filter-actions button:last-child {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+    }
+
+    /************ Nyhedsbrev **************/
+    .rundtlogo_container img {
+        width: 200px;
+        padding-block: 2rem;
+    }
+
+    .rundtlogo_container {
+        text-align: center;
+    }
+
+    .tilmeld_tekst {
+        padding: 2rem;
+    }
+
+    .tilmeld_tekst p {
+        padding-top: 1rem;
+    }
+
+    .nyhedsbrev-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .nyhedsbrev-form input {
+        padding: 0.8rem;
+        width: 100%;
+        max-width: 400px;
+        border: 1px solid var(--kontrastfarve);
+        border-radius: 0.4rem;
+        font-family: "Outfit", sans-serif;
+        font-size: 1rem;
+        color: var(--kontrastfarve);
+    }
+
+    .nyhedsbrev-form button {
+        padding: 0.8rem 1rem;
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border: 1px solid var(--kontrastfarve);
+        border-radius: 0.4rem;
+        font-weight: bold;
+        font-family: "Outfit", sans-serif;
+        cursor: pointer;
+        transition: background 0.3s ease;
+    }
+
+    .nyhedsbrev-form button::after {
+        content: "→";
+        margin-left: 18.8rem;
+    }
+
+    .nyhedsbrev-form button:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+    @media (min-width: 900px) {
+        .tilmeld_sektion {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+        }
+
+        .nyhedsbrev-form {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .tilmeld_tekst {
+            padding-right: 5rem;
+            padding-left: 7rem;
+        }
+
+        .rundtlogo_container img {
+            width: 300px;
+            padding-block: 2rem;
+        }
+    }
+
+
+    /********** Bliv medlem -popup **********/
+    /* Pop-up baggrund */
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4px);
+        /* sløret baggrund */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* mørk overlay */
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Selve boksen */
+    .modal-content {
+        background-color: var(--Baggrundsfarve);
+        padding: 2rem;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        font-family: "Outfit", sans-serif;
+        border-radius: 0.4rem;
+    }
+
+    .modal-content input {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid var(--kontrastfarve);
+        border-radius: 0.4rem;
+        color: var(--kontrastfarve);
+    }
+
+    .blivmedlem-h2 {
+        font-family: "Outfit", sans-serif;
         margin-bottom: 1rem;
     }
 
-    .header-row h1 {
-        margin: 0;
+    .submit-btn3 {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
     }
 
-    @media (min-width: 600px) {
-        .gallery {
-            grid-template-columns: repeat(3, 1fr);
-        }
+    .submit-btn3:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+    .submit-btn3::after {
+        content: "→";
+        margin-left: 1rem;
+    }
+
+    .close-btn {
+        margin-top: 1rem;
+        padding-left: 0.2rem;
+        cursor: pointer;
+        border: none;
+        background-color: black;
+        color: white;
+    }
+
+    /********** tilmeldings-popup **********/
+
+    .modal {
+        display: none;
+        position: fixed;
+        z-index: 9999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        backdrop-filter: blur(4px);
+        /* sløret baggrund */
+        background-color: rgba(0, 0, 0, 0.5);
+        /* mørk overlay */
+        justify-content: center;
+        align-items: center;
+    }
+
+    .tilmelding-h2 {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+    }
+
+    .modal-content {
+        background-color: var(--Baggrundsfarve);
+        padding: 2rem;
+        width: 90%;
+        max-width: 500px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        text-align: left;
+        font-family: "Outfit", sans-serif;
+        border-radius: 0.4rem;
+    }
+
+    .modal-form {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .modal-form input {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border: 1px solid var(--kontrastfarve);
+        border-radius: 0.4rem;
+        color: var(--kontrastfarve);
+    }
+
+    .tilmelding-p {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+        font-size: 0.81rem;
+    }
+
+    .tilmelding-p2 {
+        font-family: "Outfit", sans-serif;
+        font-size: 0.9rem;
+        font-weight: bolder;
+        padding-top: 1rem;
+        padding-top: 1rem;
+        margin-top: 1rem;
+    }
+
+    .tilmelding-p3 {
+        font-family: "Outfit", sans-serif;
+        margin-bottom: 1rem;
+        font-size: 0.7rem;
+        margin-top: -1rem;
+    }
+
+
+    .submit-btn {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
+
+    }
+
+    .submit-btn2 {
+        background-color: var(--lyserød2);
+        color: var(--kontrastfarve);
+        border-radius: 0.4rem;
+        padding: 1rem;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-family: "Outfit", sans-serif;
+        border: 1px solid var(--kontrastfarve);
+        display: flex;
+        gap: 15rem;
+        margin-top: 1rem;
+
+    }
+
+    .submit-btn:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+    .submit-btn2:hover {
+        background-color: var(--kontrastfarve);
+        color: var(--lyserød2);
+    }
+
+
+    .submit-btn::after {
+        content: "→";
+        margin-left: 1rem;
+    }
+
+    .submit-btn2::after {
+        content: "→";
+        margin-left: 1rem;
+    }
+
+    .close-btn {
+        margin-top: 1rem;
+        background: none;
+        border: none;
+        color: black;
+        text-decoration: underline;
+        cursor: pointer;
+        font-weight: bold;
     }
 </style>

@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
+
   const by = params.get("by"); // f.eks. "Nørrebro"
 
   const header = document.querySelector(".header-row h1");
@@ -20,10 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
       const cardsMarkup = data
         .map(
           (produkt) => `
-        <div class="card">
+       <a href="produktside.html?id=${produkt.id}"  class="card">
           <img src="${produkt.billede || "/img/produktimg.png"}" alt="${produkt.produktnavn}">
           <div class="produkt_info">
             <h4>${produkt.produktnavn}</h4>
+            <p class="str">${produkt.mærke}</p>
             <p class="str">${produkt.str}</p>
           </div>
         </div>
