@@ -54,58 +54,59 @@
     </header>
     <main>
 
-<div class="wrapper">
+        <div class="wrapper">
 
-        <div class="sektion1">
-            <div>
-                <img class="hero_billede_desktop" src="/img/hero_billede_com_nyt.jpg" alt="Hero billede">
-            </div>
-            <div class="intro">
-                <div class="intro_padding">
-                    <h1>VELKOMMEN TIL ANOTHER CLOSET</h1>
-                    <p>Bliv en del af et kollektivt klædeskab på abonnement.</p>
-                    <p>Lån 3 unikke stykker tøj hver måned for kun <b>149 kr</b>.</p>
+            <div class="sektion1">
+                <div>
+                    <img class="hero_billede_desktop" src="/img/hero_billede_com_nyt.jpg" alt="Hero billede">
                 </div>
-                <div class="cta_knap_øverst"> <a href="#">BLIV MEDLEM I DAG</a></div>
+                <div class="intro">
+                    <div class="intro_padding">
+                        <h1>VELKOMMEN TIL ANOTHER CLOSET</h1>
+                        <p>Bliv en del af et kollektivt klædeskab på abonnement.</p>
+                        <p>Lån 3 unikke stykker tøj hver måned for kun <b>149 kr</b>.</p>
+                    </div>
+                    <div class="cta_knap_øverst "> <a href="" class="bliv-medlem-btn">BLIV MEDLEM I DAG</a></div>
+
+                </div>
             </div>
         </div>
-          </div>
 
-            <div class="sektion2">
-                <h2 class="h2_nyesteiskabet"> NYESTE I SKABET</h2>
-                <div class="card_sektion">
+        <div class="sektion2">
+            <h2 class="h2_nyesteiskabet"> NYESTE I SKABET</h2>
+            <div class="card_sektion">
 
+            </div>
+        </div>
+
+        <div class="sektion3">
+            <h2>SÅDAN FUNGERER ANOTHER CLOSET</h2>
+            <div class="guide">
+                <div><img src="/SVG/guide1.svg" alt="">
+                    <p>Find dit tøjfælleskab</p>
+                </div>
+                <div><img src="/SVG/guide2.svg" alt="">
+                    <p>Tilmeld dig en tøjsalon</p>
+                </div>
+                <div><img src="/SVG/guide3.svg" alt="">
+                    <p>Mød op & lån 3 stykker tøj</p>
+                </div>
+                <div><img src="/SVG/guide4.svg" alt="">
+                    <p>En måned senere:
+                        returner & lån nyt.</p>
                 </div>
             </div>
-
-            <div class="sektion3">
-                <h2>SÅDAN FUNGERER ANOTHER CLOSET</h2>
-                <div class="guide">
-                    <div><img src="/SVG/guide1.svg" alt="">
-                        <p>Find dit tøjfælleskab</p>
-                    </div>
-                    <div><img src="/SVG/guide2.svg" alt="">
-                        <p>Tilmeld dig en tøjsalon</p>
-                    </div>
-                    <div><img src="/SVG/guide3.svg" alt="">
-                        <p>Mød op & lån 3 stykker tøj</p>
-                    </div>
-                    <div><img src="/SVG/guide4.svg" alt="">
-                        <p>En måned senere:
-                            returner & lån nyt.</p>
-                    </div>
-                </div>
-                <h5>VIL DU VIDE MERE OM VORES KONCEPT?</h5>
-                <div class="cta_knap"><a href="voresmission.html">LÆS MERE HER</a></div>
+            <h5>VIL DU VIDE MERE OM VORES KONCEPT?</h5>
+            <div class="cta_knap"><a href="voresmission.html">LÆS MERE HER</a></div>
+        </div>
+        <div class="sektion4" id="sektion4">
+            <div class="by_tekst">
+                <h2>FIND DIT TØJFÆLLESSKAB</h2>
+                <p>Vælg den by der er tættest på dig, se deres udvalg, og bliv en del af deres fælleskab!</p>
             </div>
-            <div class="sektion4" id="sektion4">
-                <div class="by_tekst">
-                    <h2>FIND DIT TØJFÆLLESSKAB</h2>
-                    <p>Vælg den by der er tættest på dig, se deres udvalg, og bliv en del af deres fælleskab!</p>
-                </div>
-                <div class="by_container">
-                </div>
+            <div class="by_container">
             </div>
+        </div>
         </div>
 
         <!-- BLIV MEDLEM POP-UP -->
@@ -200,6 +201,7 @@
             padding-block: 0.5rem;
             font-size: 21px;
         }
+
     }
 
     /************** intro sketion ***************/
@@ -405,7 +407,6 @@
     .sektion3 h2 {
         text-align: center;
         margin: 2rem;
-
     }
 
     .sektion3 h5 {
@@ -414,6 +415,22 @@
         font-weight: 500;
         padding-top: 3rem;
     }
+
+    @media (max-width: 769px) {
+
+        .sektion3 h2 {
+            font-size: 17px;
+        }
+
+        .sektion3 h5 {
+            font-size: 14px;
+        }
+
+        .guide p {
+            font-size: 10px;
+        }
+    }
+
 
     .guide {
         display: grid;
@@ -720,4 +737,3 @@
         font-weight: bold;
     }
 </style>
-
