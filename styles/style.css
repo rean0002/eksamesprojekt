@@ -18,11 +18,11 @@ body {
 }
 
 .wrapper {
-  max-width: 1600px; /* Sæt en max-bredde for at undgå, at indholdet bliver for bredt */
-  margin: 0 auto; /* Centrerer wrapperen */
-  padding: 0 10px; /* Lidt luft på siderne, som følger med op i større skærme */
+  max-width: 1680px;
+  margin: 0 auto;
+  padding: 0 10px;
 }
-@media (min-width: 1600px) {
+@media (min-width: 1680px) {
   .wrapper {
     padding: 0 80px; /* Mere luft på meget store skærme */
   }
